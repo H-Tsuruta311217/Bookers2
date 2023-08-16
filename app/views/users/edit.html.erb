@@ -6,15 +6,15 @@
         <%= form_with model: @user do |f| %>
         <div class="form-group">
           <p><label for="user_Name">Name</label></p>
-          <p><%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"name"%></p>
+          <p><%= f.text_field :name, autofocus: true, id:"user_Name", placeholder:"name"%></p>
         </div>
         <div class="form-group">
           <p><label for="inputImage">Image</label></p>
-          <p><%= f.file_field :profile_image, placeholder: "profile_image", accept: "image/*" %></p>
+          <p><%= f.file_field :profile_image, placeholder: "profile_Image", accept: "image/*" %></p>
         </div>
         <div class="form-group">
           <p><label for="user_introduction">Introduction</label></p>
-          <p><%= f.text_area :user_introduction, id:"inputIntroduction" %></p>
+          <p><%= f.text_area :introduction, id:"user_introduction" %></p>
         </div>
         <%= f.submit "Update User", class:"btn btn-secondary" %>
     </div>
