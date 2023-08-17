@@ -9,11 +9,6 @@ class UsersController < ApplicationController
     @book = Book.new
   end
 
-  def index
-    @users = User.all
-    @book = Book.new
-  end
-
   def edit
     @user = User.find(params[:id])
   end
@@ -28,6 +23,13 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+  def index
+    @users = User.all
+    @book = Book.new
+    @user = current_user
+  end
+
 
 
   private
